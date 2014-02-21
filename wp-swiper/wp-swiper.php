@@ -131,7 +131,12 @@ function wpswiper() {
 		<div class="swiper-scrollbar"></div>
 		<div class="swiper-wrapper">
 			
-			<?php while (have_posts()) : the_post(); ?>
+			<?php 
+			$args = array(
+				'post_type' => 'post'
+			);
+			$query = new WP_Query( $args );
+			while ($query->have_posts()) : $query->the_post(); ?>
 				
 			<div class="swiper-slide">
 				<div class="swiper-content" style="height: 500px;"><?php //@TODO MAKE HEIGHT DYNAMIC ?>
