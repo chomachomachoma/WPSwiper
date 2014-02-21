@@ -40,17 +40,24 @@ function wpswiper_scripts() {
 		var mySwiper = new Swiper('.swiper-container',{
 			slidesPerView: 4,
 			scrollbar: {
-				container: '.swiper-scrollbar'
+				container: '.swiper-scrollbar',
+				draggable : true,
+				hide: false,
 			},
 			freeMode: false,
 			//freeModeFluid: true
 		})
+		jQuery('.arrow-left').on('click', function(e){
+			e.preventDefault()
+			mySwiper.swipePrev()
+		})
+		jQuery('.arrow-right').on('click', function(e){
+			e.preventDefault()
+			mySwiper.swipeNext()
+		})
 	</script>
 <?php
 }
-
-// Hook into the 'wp_enqueue_scripts' action
-
 
 // create custom plugin settings menu
 add_action('admin_menu', 'wpswiper_create_menu');
@@ -87,7 +94,7 @@ function wpswiper_settings_page() {
 		</tr>
 		 
 		<tr valign="top">
-		<th scope="row">Number of characters shown in excerpt. (Default 125) <em>*Note: last word will NOT be truncated.</em></th>
+		<th scope="row">Number of characters shown in excerpt. (Default 150) <em>*Note: last word will NOT be truncated.</em></th>
 		<td><input type="text" name="some_other_option" value="<?php echo get_option('some_other_option'); ?>" /></td>
 		</tr>
 		
@@ -128,7 +135,11 @@ function wpswiper() {
 ?>
 
 	<div class="swiper-container" style="height: 500px;"><?php //@TODO MAKE HEIGHT DYNAMIC ?>
-		<div class="swiper-scrollbar"></div>
+		<a class="arrow-left" href="#"></a> 
+		<a class="arrow-right" href="#"></a>
+		<div class="swiper-scrollbar-container">
+			<div class="swiper-scrollbar"></div>
+		</div>
 		<div class="swiper-wrapper">
 			
 			<?php 
@@ -150,11 +161,11 @@ function wpswiper() {
 					<div class="inner-content">
 						<div class="title">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-								<h2><?php the_title(); ?></h2>
+								<h2 class="entry-title"><?php the_title(); ?></h2>
 							</a>
 						</div>
 						<div class="excerpt">
-							<?php get_excerpt(125); ?>
+							<?php get_excerpt(150); ?>
 						</div>
 					</div>
 				</div>

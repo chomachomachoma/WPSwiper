@@ -30,6 +30,35 @@ Basic Swiper Styles
 	/* Fix of Webkit flickering */
 	z-index:1;
 }
+.swiper-container .arrow-left,
+.swiper-container .arrow-right {
+	width: 5%;
+	height: 12px;
+	font-family:'arial', sans-serif;
+	font-size:10px;
+	font-weight:bold;
+	line-height: 12px;
+	border-radius:99px;
+	position: absolute;
+	color:#fff;
+	background-color: rgba(0,0,0,0.5);
+	bottom:0;
+	margin-top:-13px;
+	text-align:center;
+	z-index:100;
+}
+.swiper-container .arrow-left {
+	left: 0px;
+}
+.swiper-container .arrow-right {
+	right: 0px;
+}
+.swiper-container .arrow-left:before {
+	content:"\003C";
+}
+.swiper-container .arrow-right:before {
+	content:"\003E";
+}
 .swiper-wrapper {
 	position:relative;
 	width:100%;
@@ -70,7 +99,9 @@ Basic Swiper Styles
 .swiper-slide {
 	float: left;
 }
-
+.swiper-slide .swiper-content {
+	overflow:hidden;
+}
 /* IE10 Windows Phone 8 Fixes */
 .swiper-wp8-horizontal {
 	-ms-touch-action: pan-y;
@@ -78,13 +109,8 @@ Basic Swiper Styles
 .swiper-wp8-vertical {
 	-ms-touch-action: pan-x;
 }
-
-/* ===============================================================
-Custom Styles
-================================================================*/
 .swiper-slide .swiper-content {
 	margin-left:10px;
-	border:1px solid #ccc;
 }
 .swiper-slide:first-child .swiper-content {
 	margin-left:0;
@@ -98,18 +124,21 @@ Custom Styles
 .swiper-slide .inner-content {
 	padding: 0 15px;
 }
-
 /* ===============================================================
 Scrollbar Styles
 ================================================================*/
+.swiper-scrollbar-container {
+	display:block;
+	float:left;
+	padding:0 20px !important;
+}
 .swiper-scrollbar {
-	width: 100%;
+	width: 88%;
 	border-radius: 99px;
-	position: relative;
 	background: rgba(0,0,0,0.1);
-	height: 8px;
+	height: 12px;
 	position: absolute;
-	left: 0;
+	left: 6%;
 	bottom: 0px;
 	z-index: 1;
 	-ms-touch-action: none;
@@ -119,9 +148,24 @@ Scrollbar Styles
 	width: 100%;
 	position: relative;
 	background: rgba(0,0,0,0.5);
-	border-radius: 10px;
+	border-radius: 99px;
 }
 .swiper-scrollbar-cursor-drag {
 	cursor: move;
 }
+
+/* ===============================================================
+Custom Styles
+================================================================*/
+.swiper-slide .swiper-content {
+	border:1px solid #eee;
+	background:#f7f7f7;
+}
+.swiper-slide .swiper-content .entry-title {
+	font-size:18px;
+	line-height:21px;
+	margin:20px 0 10px;
+}
+
+
 
