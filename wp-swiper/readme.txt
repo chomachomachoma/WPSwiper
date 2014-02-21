@@ -37,6 +37,8 @@ Display your Wordpress posts in a horizontal slider that is desktop and mobile t
 
 
 == Frequently Asked Questions ==
+Q: How do I use this?
+A: Add the following snippet in your template file where you want WP Swiper to appear. <?php if (function_exists('wpswiper')) { wpswiper(); } ?>
 
 
 == Screenshots ==
