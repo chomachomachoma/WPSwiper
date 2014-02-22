@@ -14,6 +14,11 @@ Basic Swiper Styles
 	backface-visibility:hidden;
 	/* Fix of Webkit flickering */
 	z-index:1;
+	cursor: move;
+	cursor: -webkit-grab; cursor: -moz-grab;
+}
+.swiper-container:active {
+	cursor: -webkit-grabbing; cursor: -moz-grabbing;
 }
 .swiper-container .arrow-left,
 .swiper-container .arrow-right {
@@ -94,15 +99,11 @@ Basic Swiper Styles
 .swiper-wp8-vertical {
 	-ms-touch-action: pan-x;
 }
-.swiper-slide .swiper-content {
-	margin-left:10px;
-}
+
 .swiper-slide:first-child .swiper-content {
 	margin-left:0;
 }
-.swiper-slide:last-child .swiper-content {
-	margin-right:0;
-}
+
 .swiper-slide .feature-img img {
 	width:100%;
 }
@@ -118,12 +119,10 @@ Scrollbar Styles
 	padding:0 20px !important;
 }
 .swiper-scrollbar {
-	width: 88%;
 	border-radius: 99px;
 	background: rgba(0,0,0,0.1);
 	height: 12px;
 	position: absolute;
-	left: 6%;
 	bottom: 0px;
 	z-index: 1;
 	-ms-touch-action: none;
@@ -146,10 +145,15 @@ Custom Styles
 	border:1px solid #eee;
 	background:#f7f7f7;
 }
-.swiper-slide .swiper-content .entry-title {
-	font-size:18px;
-	line-height:21px;
+.swiper-slide .swiper-content .title h2 {
+	font-size:16px;
+	font-weight:bold;
+	line-height:18px;
 	margin:20px 0 10px;
+}
+.swiper-slide .swiper-content .excerpt {
+	font-size:14px;
+	line-height:18px;
 }
 
 
