@@ -42,8 +42,8 @@ A: In a template file: <?php if (function_exists('wpswiper')) { wpswiper(); } ?>
 
 
 == Screenshots ==
-1. WP Slider in action
-2. Admin options
+1. WP Swiper in action
+2. WP Swiper Admin options
 
 
 == Changelog ==
