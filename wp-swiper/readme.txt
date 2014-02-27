@@ -35,13 +35,15 @@ Display your Wordpress posts in a horizontal slider that is desktop and mobile t
 4. Activate the plugin in the Plugin dashboard
 
 
-
 == Frequently Asked Questions ==
 Q: How do I use this?
-A: Add the following snippet in your template file where you want WP Swiper to appear. <?php if (function_exists('wpswiper')) { wpswiper(); } ?>
+A: In a template file: <?php if (function_exists('wpswiper')) { wpswiper(); } ?>
+    As a shortcode: [wpswiper]; Parameters: post_type="" (post slug), category="" (category_slug), show_posts="" (integer)
 
 
 == Screenshots ==
+1. WP Slider in action
+2. Admin options
 
 
 == Changelog ==

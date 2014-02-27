@@ -30,12 +30,11 @@ Basic Swiper Styles
 	line-height: 12px;
 	border-radius:99px;
 	position: absolute;
-	color:#fff;
-	background-color: rgba(0,0,0,0.5);
 	bottom:0;
 	margin-top:-13px;
 	text-align:center;
 	z-index:100;
+	text-decoration:none;
 }
 .swiper-container .arrow-left {
 	left: 0px;
@@ -120,7 +119,6 @@ Scrollbar Styles
 }
 .swiper-scrollbar {
 	border-radius: 99px;
-	background: rgba(0,0,0,0.1);
 	height: 12px;
 	position: absolute;
 	bottom: 0px;
@@ -131,7 +129,6 @@ Scrollbar Styles
 	height: 100%;
 	width: 100%;
 	position: relative;
-	background: rgba(0,0,0,0.5);
 	border-radius: 99px;
 }
 .swiper-scrollbar-cursor-drag {
@@ -141,9 +138,10 @@ Scrollbar Styles
 /* ===============================================================
 Custom Styles
 ================================================================*/
-.swiper-slide .swiper-content {
-	border:1px solid #eee;
-	background:#f7f7f7;
+.swiper-slide .metadata {
+	font-size:75%;
+	margin:0 0 10px;
+	opacity:0.6;
 }
 .swiper-slide .swiper-content .title h2 {
 	font-size:16px;
